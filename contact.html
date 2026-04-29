@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Neem contact op met Zosia Valstar – psychosociale therapie in Maassluis.">
-    <title>Contact | Zosia Valstar</title>
+    <meta name="robots" content="index, follow">
+    <title>Contact | Zosia Valstar – Psychosociale Therapie Maassluis</title>
+    <meta name="description" content="Neem contact op met Zosia Valstar – psychosociale therapie in Maassluis. Ferdinand Bolplein 9, gratis parkeren. Stuur een bericht of mail naar info@zosiavalstar.nl.">
+    <link rel="canonical" href="https://www.zosiavalstar.nl/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact | Zosia Valstar">
+    <meta property="og:description" content="Neem contact op voor een kennismakingsgesprek. Ferdinand Bolplein 9, Maassluis – gratis parkeren.">
+    <meta property="og:image" content="https://www.zosiavalstar.nl/assets/images/og-image.webp">
+    <meta property="og:url" content="https://www.zosiavalstar.nl/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +24,10 @@
     <main style="padding-top: 150px;">
         <section class="section">
             <div class="reveal" style="max-width: var(--container-max); margin: 0 auto 50px;">
-                <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem);">Laten we kennismaken.</h2>
+                <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem);">Laten we kennismaken.</h1>
                 <p style="color: var(--grey); font-size: 1.05rem; margin-top: 14px;">
-                    Ferdinand Bolplein 9, 3141 GB Maassluis &nbsp;·&nbsp; <strong>Gratis parkeren</strong>
+                    Ferdinand Bolplein 9, 3141 GB Maassluis &nbsp;·&nbsp; <strong style="color: var(--dark);">Gratis parkeren</strong> &nbsp;·&nbsp;
+                    <a href="mailto:info@zosiavalstar.nl" style="color: var(--dark); font-weight: 600;">info@zosiavalstar.nl</a>
                 </p>
             </div>
 
@@ -27,22 +39,36 @@
                         style="border:0;"
                         allowfullscreen=""
                         loading="lazy"
-                        title="Locatie praktijk Zosia Valstar">
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Locatie praktijk Zosia Valstar – Ferdinand Bolplein 9 Maassluis">
                     </iframe>
                 </div>
                 <div class="form-box">
-                    <form action="https://formspree.io/f/jouw-id" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/JOUW-FORMSPREE-ID" method="POST">
+                        <input type="hidden" name="_subject" value="Nieuw bericht via website Zosia Valstar">
+                        <input type="hidden" name="_language" value="nl">
+
                         <div class="f-group">
                             <label for="name">Naam *</label>
-                            <input type="text" id="name" name="name" autocomplete="name" required>
+                            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Jouw naam">
                         </div>
                         <div class="f-group">
                             <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <input type="email" id="email" name="email" autocomplete="email" required placeholder="jouw@email.nl">
+                        </div>
+                        <div class="f-group">
+                            <label for="onderwerp">Onderwerp</label>
+                            <select id="onderwerp" name="onderwerp">
+                                <option value="">Kies een onderwerp…</option>
+                                <option value="Kennismakingsgesprek">Kennismakingsgesprek plannen</option>
+                                <option value="Individuele therapie">Individuele therapie</option>
+                                <option value="Relatietherapie">Relatietherapie</option>
+                                <option value="Vraag">Algemene vraag</option>
+                            </select>
                         </div>
                         <div class="f-group">
                             <label for="message">Bericht *</label>
-                            <textarea id="message" name="message" required style="height: 160px; resize: vertical;"></textarea>
+                            <textarea id="message" name="message" required placeholder="Beschrijf kort je hulpvraag of stel je vraag…" style="height: 160px; resize: vertical;"></textarea>
                         </div>
                         <button type="submit" class="btn" style="width: 100%; justify-content: center;">
                             Verstuur bericht
